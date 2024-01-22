@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 554
-  Height = 279
-  Top = 290
+  Left = 505
+  Height = 308
+  Top = 277
   Width = 775
   Caption = 'Сборщик PMD файлов для консоли Data Frog'
-  ClientHeight = 279
+  ClientHeight = 308
   ClientWidth = 775
   Position = poDesktopCenter
   LCLVersion = '3.0.0.3'
@@ -115,6 +115,14 @@ object Form1: TForm1
     Caption = 'Получить превьюшку из файла PMD'
     TabOrder = 6
     OnClick = Button_Get_Preview_From_File_OnClick
+  end
+  object Label_link_home: TLabel
+    Left = 104
+    Height = 15
+    Top = 280
+    Width = 528
+    Caption = 'Новые версии программы можно скачать от сюда: https://github.com/Galavarez/DataFrog_PMD'
+    OnClick = Label_link_home_OnClick
   end
   object ImageList: TImageList
     Left = 560

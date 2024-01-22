@@ -6,7 +6,9 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  EditBtn, PNG;
+  EditBtn, PNG, LCLIntf;
+
+// LCLIntf -- OpenURL
 
 type
 
@@ -25,11 +27,13 @@ type
     GroupBox4: TGroupBox;
     ImageList: TImageList;
     Image_Preview: TImage;
+    Label_link_home: TLabel;
     procedure Button_Build_File_OnClick(Sender: TObject);
     procedure Button_Clear_AllClick(Sender: TObject);
     procedure Button_Get_Preview_From_File_OnClick(Sender: TObject);
     procedure EditButton_Path_To_Games_OnButtonClick(Sender: TObject);
     procedure EditButton_Path_To_Png_OnButtonClick(Sender: TObject);
+    procedure Label_link_home_OnClick(Sender: TObject);
 
   private
 
@@ -121,6 +125,12 @@ begin
     Image_Preview.Picture.LoadFromFile(OD.FileName);
     EditButton_Path_To_Png.Text:= OD.FileName;
   end;
+end;
+
+// Ссылка на сайт программы
+procedure TForm1.Label_link_home_OnClick(Sender: TObject);
+begin
+  OpenURL('https://github.com/Galavarez/DataFrog_PMD');
 end;
 
 // Собрать PMD файл
